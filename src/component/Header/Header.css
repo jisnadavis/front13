@@ -1,0 +1,152 @@
+header {
+  display: flex;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  height: 19svh;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(201, 220, 236);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: var(--ppk-padding-s);
+}
+
+.menudesplagble {
+  display: none;
+}
+
+nav {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--ppk-gap-s);
+  z-index: 200;
+}
+
+li {
+  font-size: 30px;
+  text-align: center;
+  transition: transform 0.5s ease, border-bottom 0.5s ease;
+}
+
+li:hover:not(:has(.buttondiv)) {
+  transform: scale(1.1);
+  border-bottom: 2px solid;
+}
+
+li .buttondiv {
+  display: flex;
+  gap: var(--gg-gap-medium);
+  justify-content: center;
+  width: 300px;
+  justify-content: space-evenly;
+  pointer-events: auto;
+  height: 100%;
+  position: relative;
+  left: 50px;
+}
+
+li .buttondiv button {
+  transition: none;
+  pointer-events: auto;
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: beige;
+  font-size: 20px;
+  transition: transform 0.5s ease-in;
+}
+li .buttondiv button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+.active {
+  color: black;
+  font-weight: bolder;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 926px) {
+  header {
+    height: 25svh;
+  }
+}
+
+@media (max-width: 700px) {
+  li {
+    font-size: 20px;
+  }
+}
+@media (max-width: 590px) {
+  li .buttondiv {
+    position: relative;
+    left: 0px;
+  }
+}
+@media (max-width: 522px) {
+  header {
+    justify-content: space-between;
+  }
+  .menudesplagble {
+    display: block;
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in;
+  }
+  li .buttondiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+  }
+  .menudesplagble:active {
+    transform: scale(0.9);
+  }
+
+  .nodisplay {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100svh;
+    gap: var(--gg-gap-medium);
+  }
+
+  .menuvertical {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    width: 250px;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(201, 220, 236);
+    z-index: 2;
+    overflow: hidden;
+  }
+}
