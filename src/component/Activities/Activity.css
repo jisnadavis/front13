@@ -32,6 +32,22 @@
 .activity-container h1 {
   font-size: 50px;
 }
+.gobacka {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.gobacka:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+}
 @media (max-width: 700px) {
   .activity-container h1 {
     font-size: 30px;

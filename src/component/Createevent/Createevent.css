@@ -1,0 +1,21 @@
+.createevent {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.eventcreateform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ppk-gap-m);
+  justify-content: center;
+  align-items: center;
+}
+.eventcreateform span {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ppk-gap-m);
+}
+.eventcreateform p {
+  font-size: 20px;
+}

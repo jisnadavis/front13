@@ -13,8 +13,10 @@ const Usefetch = () => {
     setError(null)
     try {
       const response = await fetch(url, options)
+      console.log('raw response', response)
       if (!response.ok) {
-        const errorDetail = await response.json()
+        const errorDetail = await response.text()
+        console.error('API Error Details:', errorDetail)
         throw new Error(errorDetail.message || `Error: ${response.status}`)
       }
       const result = await response.json()

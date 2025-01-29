@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Activity.css'
+import Createevent from '../Createevent/Createevent'
 
 const Activity = () => {
   const [staff, setStaff] = useState(
     JSON.parse(localStorage.getItem('staff')) || { name: '', role: '' }
   )
   const [showForm, setShowForm] = useState(false)
+  const [showCreateEvent, setShowCreateEvent] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,6 +16,15 @@ const Activity = () => {
 
     return () => clearTimeout(timer)
   }, [])
+
+  const handleCreateEventClick = () => {
+    console.log('Create Event button clicked')
+    setShowCreateEvent(true)
+  }
+
+  const handleBackClick = () => {
+    setShowCreateEvent(false)
+  }
 
   const renderButtons = () => {
     if (!staff || !staff.role) {
@@ -65,12 +76,12 @@ const Activity = () => {
       case 'event organizer':
         return (
           <div className='buttons-container'>
-            <button>Create Events</button>
+            <button onClick={handleCreateEventClick}>Create Events</button>
             <button>Update Events</button>
             <button>Delete Events</button>
-            <button>apuntar extra</button>
-            <button>get extra</button>
-            <button>update extra</button>
+            <button>Apuntar Extra</button>
+            <button>Get Extra</button>
+            <button>Update Extra</button>
           </div>
         )
       default:
@@ -96,6 +107,10 @@ const Activity = () => {
           src='https://www.decoches.net/web/assets/custom/img/loading.gif'
           alt='loading'
         />
+      ) : showCreateEvent ? (
+        <>
+          <Createevent />
+        </>
       ) : (
         <>
           <div className='welcome-message'>
