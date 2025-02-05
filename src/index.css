@@ -29,3 +29,7 @@ body {
   --ppk-gap-l: 40px;
   --ppk-gap-xl: 50px;
 }
+html,
+body {
+  overflow-x: hidden;
+}

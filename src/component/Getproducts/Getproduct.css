@@ -1,0 +1,25 @@
+.pdes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.productparticular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+}
+.product {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 593px) {
+  .product {
+    width: 300px;
+  }
+}

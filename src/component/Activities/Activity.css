@@ -1,13 +1,22 @@
 .activity-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 20px;
   width: 100%;
+  justify-content: center;
   flex-wrap: wrap;
-
   height: 500px;
   padding: var(--ppk-padding-m);
+}
+.activitydiv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ppk-gap-m);
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  height: 100%;
+  flex-wrap: wrap;
 }
 .buttons-container {
   display: flex;
@@ -51,5 +60,23 @@
 @media (max-width: 700px) {
   .activity-container h1 {
     font-size: 30px;
+  }
+}
+@media (max-width: 580px) {
+  .activitydiv {
+    width: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    display: flex;
+  }
+  .activity-container {
+    max-width: 370px;
+  }
+  .buttons-container {
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
   }
 }

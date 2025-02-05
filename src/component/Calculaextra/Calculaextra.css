@@ -1,0 +1,28 @@
+.selectdate {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  width: 100svh;
+  justify-content: center;
+}
+.date-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+}
+.date-filters label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.calculate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100svh;
+}

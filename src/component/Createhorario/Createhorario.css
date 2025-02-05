@@ -1,0 +1,142 @@
+.create-horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100svh;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+  padding: 20px;
+}
+
+.staff-list {
+  display: flex;
+  max-width: 90vw;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.staff-item {
+  width: 220px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid salmon;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+}
+
+.horariostaff {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.selected-staff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+  height: auto;
+  text-align: center;
+}
+
+.selected-staff button {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.horario-forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.horario-item {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.horario-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.horario-item label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.horario-item input,
+.horario-item select {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.generall {
+  width: 170px;
+  height: 70px !important;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .staff-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .staff-item {
+    width: 90%;
+  }
+
+  .horario-forms {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-horario {
+    padding: 10px;
+  }
+
+  .horariostaff {
+    font-size: 1.2rem;
+  }
+
+  .selected-staff h2 {
+    font-size: 1.2rem;
+  }
+
+  .selected-staff button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .horario-item {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px;
+  }
+}

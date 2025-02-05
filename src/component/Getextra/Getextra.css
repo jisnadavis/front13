@@ -1,0 +1,52 @@
+.selectdate {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--ppk-gap m);
+  height: 100%;
+  align-content: center;
+  width: 100%;
+}
+.selectdate1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+.selectdate2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: var(--ppk-gap-m);
+  height: 400px;
+}
+.extra-hour-item {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+  align-content: center;
+  text-align: left;
+  gap: var(--ppk-gap-s);
+}
+.extra-hour-item button {
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+}
+.updateform {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}

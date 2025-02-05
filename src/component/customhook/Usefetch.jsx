@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-const Base_url = 'https://proyecto13-eight.vercel.app'
+const Base_url = 'https://proyecto13-jgl9.vercel.app'
 
 const Usefetch = () => {
   const [data, setData] = useState(null)

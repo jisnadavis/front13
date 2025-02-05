@@ -1,0 +1,31 @@
+.productparticularr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+  padding: var(--ppk-padding-m);
+  flex-wrap: wrap;
+}
+.category-filter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 600px;
+  flex-wrap: wrap;
+}
+select {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+}
+@media (max-width: 591px) {
+  .category-filter {
+    max-width: 400px;
+    flex-direction: column;
+    gap: var(--ppk-gap-m);
+  }
+}
