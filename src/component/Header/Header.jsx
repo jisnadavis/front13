@@ -47,7 +47,7 @@ export const Header = () => {
     <div>
       <header>
         <img
-          src='./src/assets/circuito-del-jarama.jpg'
+          src='./assets/circuito-del-jarama.jpg'
           alt='menu_home'
           className='logo'
         />
