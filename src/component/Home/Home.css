@@ -99,6 +99,8 @@
 @media (max-width: 768px) {
   .app h1 {
     font-size: 2rem;
+    position: absolute;
+    top: 300px;
   }
   @keyframes typing {
     from {
