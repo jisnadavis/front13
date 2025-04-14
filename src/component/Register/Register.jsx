@@ -16,7 +16,7 @@ const Register = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowForm(true)
-    }, 3000)
+    }, 10)
     return () => clearTimeout(timer)
   }, [])
 
@@ -45,7 +45,7 @@ const Register = () => {
       : 'cant not register the staff'
   return (
     <div className='form-container'>
-      {(!showForm || isSubmitting) && (
+      {isSubmitting && (
         <img
           className='loading_img'
           src='https://www.decoches.net/web/assets/custom/img/loading.gif'
@@ -80,8 +80,7 @@ const Register = () => {
             {...register('email', {
               required: 'Introduce your email',
               pattern: {
-                value:
-                  /^[a-zA-Z0-9._%+-]*[0-9]+[a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                value: /^[a-zA-Z0-9._%+-]+@gmail\.com$/,
                 message: 'The email ID should contain one number and @'
               },
               minLength: {

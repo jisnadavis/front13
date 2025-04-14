@@ -5,7 +5,7 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  height: 500px;
+  height: 400px;
   padding: var(--ppk-padding-m);
 }
 .activitydiv {
@@ -13,7 +13,7 @@
   flex-direction: column;
   gap: var(--ppk-gap-m);
   align-items: center;
-  width: 100%;
+  width: 70%;
   justify-content: space-around;
   height: 100%;
   flex-wrap: wrap;
@@ -39,7 +39,7 @@
   color: white;
 }
 .activity-container h1 {
-  font-size: 50px;
+  font-size: 30px;
 }
 .gobacka {
   width: 150px;

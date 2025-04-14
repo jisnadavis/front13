@@ -84,6 +84,7 @@ export const Header = () => {
                 <NavLink
                   to='/login'
                   activeclassname='active'
+                  className='loginb'
                   onClick={closeMenu}
                 >
                   Login
@@ -95,6 +96,7 @@ export const Header = () => {
                 <NavLink
                   to='/register'
                   activeclassname='active'
+                  className='registerb'
                   onClick={closeMenu}
                 >
                   Register
@@ -104,7 +106,7 @@ export const Header = () => {
           </ul>
         </nav>
         <img
-          src='https://w7.pngwing.com/pngs/639/1013/png-transparent-hamburger-button-computer-icons-drop-down-list-fast-food-menu-rectangle-share-icon-pancake.png'
+          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jF5DP1QgfbTWIPsxQx9jf7b4XWvZvTqtuA&s'
           className='menudesplagble'
           onClick={toggleMenu}
         />
