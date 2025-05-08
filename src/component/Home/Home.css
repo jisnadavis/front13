@@ -122,9 +122,17 @@
       width: 50%;
     }
   }
-
-  .typewriter .typewriter1 {
-    padding: var(--ppk-padding-l);
-    top: 400px;
+}
+@media (max-width: 400px) {
+  .typewriter {
+    position: absolute;
+    top: 500px !important;
+  }
+  .typewriter1 {
+    position: absolute;
+    top: 550px !important;
+  }
+  .apphome {
+    height: 100svh;
   }
 }

@@ -1,11 +1,12 @@
 .activity-container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  height: 400px;
+  height: fit-content;
   padding: var(--ppk-padding-m);
 }
 .activitydiv {
@@ -20,7 +21,7 @@
 }
 .buttons-container {
   display: flex;
-  width: 600px;
+  width: 90%;
   flex-wrap: wrap;
   padding: var(--ppk-padding-m);
   justify-content: center;
@@ -62,21 +63,22 @@
     font-size: 30px;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 650px) {
   .activitydiv {
-    width: 300px;
+    width: 550px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
+
     display: flex;
   }
-  .activity-container {
-    max-width: 370px;
-  }
-  .buttons-container {
-    align-items: center;
-    justify-content: center;
-    max-width: 300px;
+}
+.buttons-container {
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .activitydiv {
+    width: 60%;
   }
 }

@@ -52,7 +52,18 @@ const Login = () => {
 
   return (
     <div className='logincontainer'>
-      {showForm && !data && (
+      {submitting && !data && !error && (
+        <div className='loading'>
+          <img
+            className='loading_img'
+            src='https://www.decoches.net/web/assets/custom/img/loading.gif'
+            alt='Loading...'
+          />
+          <p>Logging in, please wait...</p>
+        </div>
+      )}
+
+      {(!submitting || error) && showForm && !data && (
         <form className='loginform' onSubmit={handleSubmit(submitForm)}>
           <label htmlFor='email'>Enter your email ID</label>
           <input
@@ -77,10 +88,9 @@ const Login = () => {
           )}
 
           <button type='submit' className='general'>
-            login
+            Login
           </button>
 
-          {/* Show login error message under the form */}
           {error && (
             <p style={{ color: 'red', marginTop: '1rem' }}>{errorMessage}</p>
           )}

@@ -4,6 +4,15 @@
   align-items: center;
   width: 100%;
   align-items: center;
+  position: relative;
+  padding: 10px;
+  height: 70svh;
+  overflow-y: hidden;
+}
+.eventerror {
+  position: absolute;
+  top: 30%;
+  padding: 20px;
 }
 .eventimg {
   height: 300px;
@@ -51,6 +60,19 @@ h3,
 p {
   font-size: 20px;
 }
+@media (max-width: 852px) {
+  .getevents {
+    position: relative;
+
+    height: 110svh;
+  }
+  .eventerror {
+    position: absolute;
+    top: 10%;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 430px) {
   .eventimg {
     width: 250px;

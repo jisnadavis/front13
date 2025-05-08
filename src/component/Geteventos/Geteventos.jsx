@@ -57,7 +57,7 @@ const Geteventos = () => {
         </div>
       )}
       {error && (
-        <div>
+        <div className='eventerror'>
           <p style={{ color: 'red' }}>{errorMessage}</p>
           <button
             onClick={() => {

@@ -4,6 +4,13 @@
   justify-content: center;
   align-items: center;
 }
+.loading {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .loginform {
   display: flex;
   flex-direction: column;

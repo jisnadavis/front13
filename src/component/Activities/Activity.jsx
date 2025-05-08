@@ -180,13 +180,7 @@ const Activity = () => {
   return (
     <div className='activity-container'>
       <div className='activitydiv'>
-        {!showForm ? (
-          <img
-            className='loading_img'
-            src='https://www.decoches.net/web/assets/custom/img/loading.gif'
-            alt='loading'
-          />
-        ) : showCreateEvent ? (
+        {showCreateEvent ? (
           <>
             <Createevent />
           </>

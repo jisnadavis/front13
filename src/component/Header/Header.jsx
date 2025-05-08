@@ -54,20 +54,23 @@ export const Header = () => {
 
         <nav className={open ? 'menuvertical' : 'nodisplay'}>
           <ul>
-            <li>
-              <NavLink to='/' activeclassname='active' onClick={closeMenu}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to='/Events'
-                activeclassname='active'
-                onClick={closeMenu}
-              >
-                Events
-              </NavLink>
-            </li>
+            <div className='menulist'>
+              '
+              <li>
+                <NavLink to='/' activeclassname='active' onClick={closeMenu}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/Events'
+                  activeclassname='active'
+                  onClick={closeMenu}
+                >
+                  Events
+                </NavLink>
+              </li>
+            </div>
             <li>
               {isAuthenticated ? (
                 <>
