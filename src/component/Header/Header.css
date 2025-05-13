@@ -4,7 +4,7 @@ header {
   width: 100%;
   padding: 10px;
   margin-right: 10px;
-  height: 20svh;
+  height: 15svh;
 
   align-items: center;
   justify-content: space-between;
@@ -119,13 +119,10 @@ li .buttondiv button:hover {
 /* Responsive styling for smaller screens */
 
 @media (max-width: 992px) {
-  header {
-    height: 25svh;
-  }
 }
 @media (max-width: 926px) {
   header {
-    height: 25svh;
+    height: 15svh;
   }
 }
 @media (max-width: 920px) {
@@ -189,8 +186,22 @@ li .buttondiv button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 50svh;
+    align-content: flex-start;
+    height: 600px;
+    position: absolute;
+    top: 0px;
     gap: var(--gg-gap-medium);
+  }
+  li .buttondiv {
+    position: absolute;
+    top: 300px;
+    left: -30px;
+  }
+  .menulist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .menuvertical {

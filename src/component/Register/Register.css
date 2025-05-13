@@ -5,14 +5,15 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 70svh;
+  height: 85svh;
   position: relative;
   top: 150px;
   align-content: center;
-  padding: var(--ppk-padding-l);
+  padding: var(--ppk-padding-xl);
 }
 .formregister {
   display: flex;
+
   flex-direction: column;
   align-items: center;
   font-size: 20px;
@@ -20,6 +21,7 @@
   width: 100%;
   gap: var(--ppk-padding-l);
   flex-wrap: wrap;
+  padding: var(--ppk-padding-l);
 }
 .loading_img {
   width: 100px;

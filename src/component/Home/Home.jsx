@@ -4,7 +4,7 @@ import './Home.css'
 const Home = () => {
   return (
     <div className='apphome'>
-      <h1> Impulsa tu Carrera en la Hostelería:</h1>
+      <h1 className='heading'> Impulsa tu Carrera en la Hostelería:</h1>
       <h2 className='typewriter'> "La felicidad empieza "</h2>
       <h2 className='typewriter1'> a través del paladar"</h2>
     </div>
