@@ -139,7 +139,7 @@ const Register = () => {
       )}
 
       {data && (
-        <div className='success'>
+        <div className='successs'>
           <p>You are successfully registered, {data.name}.</p>
           <button
             onClick={() => {

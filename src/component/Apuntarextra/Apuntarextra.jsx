@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Usefetch from '../customhook/Usefetch'
 import { useForm } from 'react-hook-form'
+import './Apuntar.css'
 
 const Apuntarextra = () => {
   const [Showextraform, SetShowextraform] = useState(false)
@@ -57,8 +58,8 @@ const Apuntarextra = () => {
       ? 'staff member not found.'
       : 'An unknown error occurred.'
   return (
-    <div>
-      {(!Showextraform || isSubmitting) && (
+    <div className='apuntarextra'>
+      {isSubmitting && (
         <img
           className='loading_img'
           src='https://www.decoches.net/web/assets/custom/img/loading.gif'

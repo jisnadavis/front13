@@ -4,20 +4,21 @@
   align-items: center;
   width: 100%;
   align-items: center;
-  position: relative;
   padding: 10px;
-  height: 80svh;
+  height: 90%;
+  position: absolute;
+  top: 50px;
   overflow-y: hidden;
 }
 .eventerror {
-  position: absolute;
-  top: 30%;
+  height: 200px;
   padding: 20px;
 }
 .eventimg {
   height: 300px;
   width: 400px;
   min-width: 200px;
+  margin-top: 30px;
   display: flex;
   border: 2px solid rgb(151, 72, 72);
   flex-direction: column;
@@ -29,6 +30,8 @@
 .loading_img {
   width: 100px;
   height: 100px;
+  position: absolute;
+  top: 100px;
 }
 .getevents img {
   width: 250px;
@@ -62,14 +65,20 @@ p {
 }
 @media (max-width: 852px) {
   .getevents {
-    position: relative;
-
-    height: 110svh;
-  }
-  .eventerror {
     position: absolute;
-    top: 10%;
-    padding: 20px;
+    top: 150px;
+    height: fit-content;
+  }
+  .eventparticular {
+    position: relative;
+    top: 0px;
+  }
+
+  .eventimg {
+    height: 300px;
+  }
+  .eventimg img {
+    width: 200px;
   }
 }
 

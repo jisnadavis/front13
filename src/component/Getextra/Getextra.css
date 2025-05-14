@@ -1,5 +1,6 @@
 .selectdate {
   display: flex;
+  position: absolute;
 
   flex-wrap: wrap;
   justify-content: space-evenly;
