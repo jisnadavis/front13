@@ -81,7 +81,7 @@ const Register = () => {
               required: 'Introduce your email',
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@gmail\.com$/,
-                message: 'The email ID should contain one number and @'
+                message: 'The email ID should contain  @'
               },
               minLength: {
                 value: 6,
