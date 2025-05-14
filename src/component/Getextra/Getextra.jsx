@@ -137,32 +137,37 @@ const GetExtra = () => {
           >
             Show Extra Hours
           </button>
+
+          {/* 🔽 Extra Hours display right below the date picker */}
+          {filteredExtraHours.length > 0 && (
+            <div className='selectdate2'>
+              {filteredExtraHours.map((extra) => (
+                <div key={extra._id} className='extra-hour-item'>
+                  <h3>
+                    <strong>
+                      {new Date(extra.fecha).toLocaleDateString()}
+                    </strong>{' '}
+                    - {extra.hours} hours at {extra.lugar}
+                  </h3>
+                  <button onClick={() => handleSelectExtra(extra)}>
+                    Update
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {filteredExtraHours.length === 0 && selectedDate && clicked && (
+            <p>No extra hours found for this date range.</p>
+          )}
         </div>
       )}
 
       {loading && <p>Loading...</p>}
+
       {errorMessage && !loading && !clicked && (
         <p style={{ color: 'red' }}>{errorMessage}</p>
       )}
-
-      {filteredExtraHours.length > 0 && !selectedExtra && (
-        <div className='selectdate2'>
-          {filteredExtraHours.map((extra) => (
-            <div key={extra._id} className='extra-hour-item'>
-              <h3>
-                <strong>{new Date(extra.fecha).toLocaleDateString()}</strong> -{' '}
-                {extra.hours} hours at {extra.lugar}
-              </h3>
-              <button onClick={() => handleSelectExtra(extra)}>Update</button>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {filteredExtraHours.length === 0 &&
-        selectedDate &&
-        !loading &&
-        clicked && <p>No extra hours found for this date range.</p>}
 
       {selectedExtra && (
         <div className='updateform'>
@@ -187,11 +192,7 @@ const GetExtra = () => {
               onChange={(e) => setUpdatedLugar(e.target.value)}
             />
           </label>
-          <button
-            onClick={handleUpdateExtra}
-            className='general
-          '
-          >
+          <button onClick={handleUpdateExtra} className='general'>
             Update
           </button>
           <button onClick={() => setSelectedExtra(null)} className='general'>

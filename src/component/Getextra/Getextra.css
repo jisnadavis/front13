@@ -1,6 +1,8 @@
 .selectdate {
   display: flex;
   position: absolute;
+  flex-direction: column;
+  top: 0px;
 
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -8,15 +10,15 @@
   gap: var(--ppk-gap m);
   height: 100%;
   align-content: center;
-  width: 100%;
 }
 .selectdate1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 400px;
+  height: 500px;
   width: 100%;
   align-items: center;
+  gap: var(--ppk-gap-m);
   position: relative;
   top: 50px;
 }
@@ -50,4 +52,29 @@
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+}
+@media (max-width: 809px) {
+  .extra-hour-item {
+    width: 400px;
+  }
+  .extra-hour-item h3 {
+    font-size: 15px;
+  }
+  .extra-hour-item button {
+    width: 60px;
+    height: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .extra-hour-item {
+    width: 300px;
+  }
+  .extra-hour-item h3 {
+    font-size: 12px;
+  }
+  .extra-hour-item button {
+    width: 50px;
+    font-size: 10px;
+    height: 25px;
+  }
 }

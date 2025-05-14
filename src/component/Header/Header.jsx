@@ -55,7 +55,6 @@ export const Header = () => {
         <nav className={open ? 'menuvertical' : 'nodisplay'}>
           <ul>
             <div className='menulist'>
-              '
               <li>
                 <NavLink to='/' activeclassname='active' onClick={closeMenu}>
                   Home
