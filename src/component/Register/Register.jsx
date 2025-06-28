@@ -62,7 +62,6 @@ const Register = () => {
             {...register('name', { required: 'Introduce your name' })}
           />
           {errors.name && <p style={{ color: 'red' }}>{errors.name.message}</p>}
-
           <label htmlFor='apellidos'>Enter your apellidos</label>
           <input
             type='text'
@@ -72,20 +71,19 @@ const Register = () => {
           {errors.apellidos && (
             <p style={{ color: 'red' }}>{errors.apellidos.message}</p>
           )}
-
           <label htmlFor='email'>Enter your email</label>
           <input
             type='email'
             id='email'
             {...register('email', {
               required: 'Introduce your email',
-              pattern: {
-                value: /^[a-zA-Z0-9._%+-]+@gmail\.com$/,
-                message: 'The email ID should contain  @'
-              },
-              minLength: {
-                value: 6,
-                message: 'Should contain minimum 6 letters'
+              validate: (value) => {
+                const [local] = value.split('@')
+                if (!value.endsWith('@gmail.com'))
+                  return 'The email should be a @gmail.com address'
+                if (local.length < 4)
+                  return 'The part before @ should be at least 4 characters'
+                return true
               }
             })}
             style={{ borderColor: errors.email ? 'red' : 'black' }}
@@ -93,7 +91,6 @@ const Register = () => {
           {errors.email && (
             <p style={{ color: 'red' }}>{errors.email.message}</p>
           )}
-
           <label htmlFor='NIE'>Enter your NIE</label>
           <input
             type='text'
@@ -107,7 +104,6 @@ const Register = () => {
             })}
           />
           {errors.NIE && <p style={{ color: 'red' }}>{errors.NIE.message}</p>}
-
           <label htmlFor='dirreccion'>Enter your direccion</label>
           <input
             type='text'
@@ -119,7 +115,6 @@ const Register = () => {
           {errors.dirreccion && (
             <p style={{ color: 'red' }}>{errors.dirreccion.message}</p>
           )}
-
           <label htmlFor='password'>Enter your password</label>
           <input
             type='password'
@@ -131,7 +126,6 @@ const Register = () => {
           {errors.password && (
             <p style={{ color: 'red' }}>{errors.password.message}</p>
           )}
-
           <button type='submit' className='general'>
             Submit
           </button>

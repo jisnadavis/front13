@@ -4,14 +4,20 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .productparticular {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
   justify-content: center;
   text-align: center;
-  align-items: center;
   gap: var(--ppk-gap-m);
+  max-height: 85vh;
+
+  padding: 1rem;
+  padding-bottom: 10px;
 }
+
 .product {
   border: 2px solid black;
   padding: 10px;

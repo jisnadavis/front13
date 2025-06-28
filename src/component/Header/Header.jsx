@@ -54,45 +54,44 @@ export const Header = () => {
 
         <nav className={open ? 'menuvertical' : 'nodisplay'}>
           <ul>
-            <div className='menulist'>
-              <li>
-                <NavLink to='/' activeclassname='active' onClick={closeMenu}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to='/Events'
-                  activeclassname='active'
-                  onClick={closeMenu}
-                >
-                  Events
-                </NavLink>
-              </li>
-            </div>
             <li>
-              {isAuthenticated ? (
-                <>
-                  <div className='buttondiv'>
-                    <button className='activity' onClick={handleLogout}>
-                      Logout
-                    </button>
-                    <button className='activity' onClick={handleactivity}>
-                      activity
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <NavLink
-                  to='/login'
-                  activeclassname='active'
-                  className='loginb'
-                  onClick={closeMenu}
-                >
-                  Login
-                </NavLink>
-              )}
+              <NavLink to='/' activeclassname='active' onClick={closeMenu}>
+                Home
+              </NavLink>
             </li>
+
+            {isAuthenticated ? (
+              <>
+                <div className='buttondiv'>
+                  <li>
+                    <NavLink
+                      to='/Events'
+                      activeclassname='active'
+                      onClick={closeMenu}
+                    >
+                      Events
+                    </NavLink>
+                  </li>
+
+                  <button className='activity' onClick={handleLogout}>
+                    Logout
+                  </button>
+                  <button className='activity' onClick={handleactivity}>
+                    activity
+                  </button>
+                </div>
+              </>
+            ) : (
+              <NavLink
+                to='/login'
+                activeclassname='active'
+                className='loginb'
+                onClick={closeMenu}
+              >
+                Login
+              </NavLink>
+            )}
+
             {!isAuthenticated && (
               <li>
                 <NavLink

@@ -13,7 +13,14 @@
   align-items: center;
   align-content: center;
   width: 600px;
+  position: relative;
+  top: 0px;
   flex-wrap: wrap;
+}
+.filterdproducts {
+  height: 90vh;
+  position: relative;
+  top: 100px;
 }
 select {
   width: 200px;

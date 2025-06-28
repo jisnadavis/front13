@@ -8,6 +8,7 @@
   height: 85svh;
   text-align: center;
   background-image: url('https://www.wsetglobal.com/media/8219/1086x672_antipasti-wine.jpg');
+  opacity: 0.6;
   background-repeat: no-repeat;
   background-size: cover;
   filter: opacity(0.7);

@@ -7,7 +7,7 @@ header {
   height: 15vh;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo {
@@ -29,27 +29,25 @@ nav {
   flex-wrap: wrap;
   align-items: center;
 }
-.menulist {
-  display: flex;
-  width: 50%;
-  justify-content: space-evenly;
-  position: relative;
-  left: -20px;
-}
+
 ul {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: var(--ppk-gap-s);
   z-index: 200;
+}
+a {
+  color: black;
 }
 
 li {
   font-size: 15px;
   text-align: center;
   padding: 20px;
+
   height: 50px !important;
   transition: transform 0.5s ease, border-bottom 0.5s ease;
 }
@@ -67,7 +65,6 @@ li:hover:not(:has(.buttondiv)) {
   font-size: 15px;
   display: inline-block;
   position: relative;
-  top: -10px;
 }
 .registerb {
   width: 120px !important;
@@ -76,37 +73,39 @@ li:hover:not(:has(.buttondiv)) {
   height: 30px;
   font-size: 15px;
   position: relative;
-  top: -10px;
+  top: -12px;
   text-align: center;
   padding: 6px;
   border-radius: 30px;
   display: inline-block;
 }
-li .buttondiv {
+.buttondiv {
   display: flex;
   gap: var(--gg-gap-medium);
 
-  width: 300px;
-  justify-content: space-evenly;
+  width: 600px;
+  justify-content: space-between;
   pointer-events: auto;
   height: 100%;
   position: relative;
-  left: 0px;
-  top: -10px;
+  left: -40px;
+
   height: fit-content;
 }
 
-li .buttondiv button {
+.buttondiv button {
   transition: none;
   pointer-events: auto;
   width: 100px;
   height: 40px;
+  position: relative;
+  top: 5px;
   border-radius: 30px;
   background-color: beige;
   font-size: 15px;
   transition: transform 0.5s ease-in;
 }
-li .buttondiv button:hover {
+.buttondiv button:hover {
   transform: scale(1.1);
   background-color: black;
   color: white;
@@ -118,7 +117,10 @@ li .buttondiv button:hover {
 
 /* Responsive styling for smaller screens */
 
-@media (max-width: 992px) {
+@media (max-width: 952px) {
+  .buttondiv {
+    width: 400px;
+  }
 }
 @media (max-width: 926px) {
   header {
@@ -126,13 +128,17 @@ li .buttondiv button:hover {
   }
 }
 @media (max-width: 920px) {
-  li .buttondiv {
+  .buttondiv {
     position: relative;
     left: 0px;
-    top: -10px;
   }
   .menulist {
     width: 30%;
+    left: 0px;
+  }
+}
+@media (max-width: 817px) {
+  .loginb {
     left: 0px;
   }
 }
@@ -140,26 +146,24 @@ li .buttondiv button:hover {
   li {
     font-size: 15px;
   }
-  li .buttondiv {
+  .buttondiv {
     position: relative;
     left: 0px;
+    width: 350px;
   }
 }
 @media (max-width: 590px) {
-  li .buttondiv {
+  .buttondiv {
     position: relative;
     left: 0px;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 664px) {
   header {
     justify-content: space-between;
   }
-  .menulist {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+
   .menudesplagble {
     display: block;
     width: 100px;
@@ -167,7 +171,7 @@ li .buttondiv button:hover {
     border-radius: 50%;
     transition: transform 0.5s ease-in;
   }
-  li .buttondiv {
+  .buttondiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,17 +189,18 @@ li .buttondiv button:hover {
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: center;
     height: 600px;
     position: absolute;
     top: 0px;
-    gap: var(--gg-gap-medium);
+    gap: var(--gg-gap-l);
   }
-  li .buttondiv {
+  .buttondiv {
     position: absolute;
-    top: 300px;
-    left: -30px;
+    top: 350px;
+    left: -42px;
   }
   .menulist {
     display: flex;
