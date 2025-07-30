@@ -77,13 +77,9 @@ const Register = () => {
             id='email'
             {...register('email', {
               required: 'Introduce your email',
-              validate: (value) => {
-                const [local] = value.split('@')
-                if (!value.endsWith('@gmail.com'))
-                  return 'The email should be a @gmail.com address'
-                if (local.length < 4)
-                  return 'The part before @ should be at least 4 characters'
-                return true
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: 'Enter a valid email address'
               }
             })}
             style={{ borderColor: errors.email ? 'red' : 'black' }}
@@ -91,6 +87,7 @@ const Register = () => {
           {errors.email && (
             <p style={{ color: 'red' }}>{errors.email.message}</p>
           )}
+
           <label htmlFor='NIE'>Enter your NIE</label>
           <input
             type='text'

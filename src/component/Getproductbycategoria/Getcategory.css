@@ -21,6 +21,7 @@
   height: 90vh;
   position: relative;
   top: 100px;
+  gap: var(--ppk-gap-m);
 }
 select {
   width: 200px;
